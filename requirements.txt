@@ -1,0 +1,3 @@
+# Librairies
+
+qrcode==8.2

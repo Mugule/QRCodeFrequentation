@@ -7,4 +7,4 @@ equip_numero = "E001I850190001"
 
 img = qrcode.make(url + equip_numero)
 
-display(img)
+st.image(img)

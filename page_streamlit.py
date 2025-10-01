@@ -21,7 +21,7 @@ if len(st.query_params) > 0 :
         img_pil = img.get_image() if hasattr(img, "get_image") else img
         st.image(img_pil, caption="QR code", width=400)
     else :
-        st.write("Numéro équipement invalide")
+        st.write("Numéro équipement invalide (" + equip_numero +"))
 # Si pas de requete
 else :
     st.write("Indiquez une requête valide pour la création d'un QR code")

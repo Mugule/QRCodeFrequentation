@@ -5,9 +5,8 @@ url = "https://equipements-sportsgouv.contribuer.io/fr/tables/P5m4Puz4NDnxvxgtOD
 
 equip_numero = "E001I850190001"
 
+st.text_input("Numéro d'équipement", value=equip_numero)
+
 img = qrcode.make(url + equip_numero)
 img_pil = img.get_image() if hasattr(img, "get_image") else img
-
-label = "oui"
-st.text_input(label, value="Numéro d'équipement")
 st.image(img_pil, caption="QR code", use_container_width=True)

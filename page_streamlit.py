@@ -4,7 +4,7 @@ import requests
 
 url = "https://equipements-sportsgouv.contribuer.io/fr/tables/P5m4Puz4NDnxvxgtODuq2gY2L_bkGbVbmKN4HphSjyE/contributions/new?prefill_equip_numero="
 
-if st.query_params["numero"] :
+if len(st.query_params) > 0 :
     numero = st.query_params["numero"]
 else :
     numero = "E001I850190001"

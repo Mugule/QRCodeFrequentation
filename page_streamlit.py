@@ -4,7 +4,12 @@ import requests
 
 url = "https://equipements-sportsgouv.contribuer.io/fr/tables/P5m4Puz4NDnxvxgtODuq2gY2L_bkGbVbmKN4HphSjyE/contributions/new?prefill_equip_numero="
 
-equip_numero = st.text_input("Numéro d'équipement", "E001I850190001")
+if st.query_params["numero"] :
+    numero = st.query_params["numero"]
+else :
+    numero = "E001I850190001"
+
+equip_numero = st.text_input("Numéro d'équipement", numero)
 
 request = "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?select=inst_nom%2C%20equip_nom%2C%20equip_type_name&where=equip_numero%20%3D%20%27" + equip_numero +"%27&limit=1"
 

@@ -8,6 +8,6 @@ equip_numero = "E001I850190001"
 img = qrcode.make(url + equip_numero)
 img_pil = img.get_image() if hasattr(img, "get_image") else img
 
+label = "oui"
 st.text_input(label, value="Numéro d'équipement")
-st.write(label, unsafe_allow_html=False)
 st.image(img_pil, caption="QR code", use_container_width=True)
